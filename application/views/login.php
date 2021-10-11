@@ -31,16 +31,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container">
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-				<a class="navbar-brand" href="<?php echo site_url('welcome/index')?>">
+				<a class="navbar-brand" href="<?php echo site_url('survey_controller/index')?>">
 					<img src="<?php echo base_url('assets/images/logo.png')?>" style="width: 100px; margin-top: -20px;" alt="Techro HTML5 template"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right mainNav">
-					<li class="active"><a href="<?php echo site_url('welcome/index')?>">Beranda</a></li>
-					<li><a href="#about">Tentang</a></li>
-					<li><a class="logbut" href="<?php echo site_url('welcome/login')?>">Login</a></li>
-				</ul>
 			</div>
 			<!--/.nav-collapse -->
 		</div>
@@ -71,7 +63,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     ?>
                 
                 <div style="padding: 30px;">
-                    <h4 class="text-muted font-18 m-b-5 text-center">Selamat Datang Brooooo</h4>
+                    <h4 class="text-muted font-18 m-b-5 text-center">Selamat Datang</h4>
                     <p class="text-muted text-center">Silahkan masukkan user dan password.</p>
 
                     <form class="form-horizontal" style="margin-top: 30px;" method="POST" action="<?php echo site_url('survey_controller/login_attempt')?>">

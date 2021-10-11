@@ -2208,7 +2208,19 @@ list-style: none;
 		
 	}
 	.modal-test{
-		height: 500px;
+		height: 400px;
+	}
+	.pdam-input{
+		padding: 0px;
+	}
+	.header-title{
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 321px){
+	.modal-test{
+		height: 280px;
 	}
 }
 

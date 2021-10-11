@@ -51,7 +51,8 @@
                             <h3 class="mt-0 header-title text-center" style="margin-bottom: 5px;" id="soal">Terima Kasih Anda telah Menyelesaikan Survey</h3>
                             <h1><i class="fas fa-check-circle text-success fa-2x mb-4"></i></h1>
                             <div class="text-center">
-                                Selamat <b>NIP</b> <span class="text-success"><b>19988828910</b></span> Telah Menyelesaikan Survey Pada Tanggal 1 Oktober 2021
+                                Selamat <b>NIP</b> <span class="text-success"><b><?= $this->session->nip?></b></span> Telah Menyelesaikan Survey Pada Tanggal <?= $date;?>
+                                <p class="mt-2" style="font-weight: lighter; font-size:13px;">Silakan Tukarkan Screenshot Ini Dengan Souvenir Yang Disediakan Panitia</p>
                             </div>
                         </div>
                     </div>

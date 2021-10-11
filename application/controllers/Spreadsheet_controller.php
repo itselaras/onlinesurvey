@@ -57,13 +57,55 @@ class Spreadsheet_controller extends CI_Controller {
 			    {
 			        $no_soal = $sheetData[$i]['0'];
 				    $soal = $sheetData[$i]['1'];
+					$jenis = $sheetData[$i]['2'];
 
 				    $ar = array(							
 							'no_soal' => $no_soal,
 							'id_perusahaan' => $id_perusahaan,
-							'soal' => $soal
+							'soal' => $soal,
+							'jenis' => $jenis
 				    	);			    	
 				  		$this->spreadsheet_model->insert('soal_survey', $ar);
+			    }
+			    
+
+			}
+			redirect(site_url('survey_controller/user_survey'));
+	}
+	public function import_user()
+	{
+	    $id_perusahaan = $this->session->id_import_user;
+		$file_mimes = array('application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+            
+			if(isset($_FILES['excel']['name']) && in_array($_FILES['excel']['type'], $file_mimes)) {
+			    
+			    
+			    $arr_file = explode('.', $_FILES['excel']['name']);
+			    $extension = end($arr_file);
+			 
+			    if('csv' == $extension) {
+			        $reader = new \PhpOffice\PhpSpreadsheet\Reader\Csv();
+			    } else {
+			        $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+			    }
+			 
+			    $spreadsheet = $reader->load($_FILES['excel']['tmp_name']);
+			     
+			    $sheetData = $spreadsheet->getActiveSheet()->toArray();
+			    
+
+			    for($i = 1;$i < count($sheetData);$i++)
+			    {
+			        $no_user = $sheetData[$i]['0'];
+				    $nip = $sheetData[$i]['1'];
+					$batch = $sheetData[$i]['2'];
+
+				    $ar = array(							
+							'nip' => $nip,
+							'id_perusahaan' => $id_perusahaan,
+							'id_batch' => $batch,
+				    	);			    	
+				  		$this->spreadsheet_model->insert('user_survey', $ar);
 			    }
 			    
 

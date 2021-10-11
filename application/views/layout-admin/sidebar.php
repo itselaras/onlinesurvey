@@ -16,14 +16,18 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('survey_controller/report_admin');?>" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span> Report</span></a>
+                                <a href="<?php echo site_url('survey_controller/report_admin');?>" class="waves-effect"><i class="mdi mdi-archive"></i><span> Report</span></a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('survey_controller/import_perusahaan');?>" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span> Import</span></a>
+                                <a href="<?php echo site_url('survey_controller/import_perusahaan');?>" class="waves-effect"><i class="mdi mdi-briefcase-download"></i><span> Import</span></a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('survey_controller/batch');?>" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span> Batchs</span></a>
+                                <a href="<?php echo site_url('survey_controller/batch');?>" class="waves-effect"><i class="mdi mdi-timetable"></i><span> Batchs</span></a>
                             </li>
+                            <li>
+                                <a href="<?php echo site_url('survey_controller/soal_survey');?>" class="waves-effect"><i class="mdi mdi-database"></i><span> Soal</span></a>
+                            </li>
+                            
 
                         </ul>
 
